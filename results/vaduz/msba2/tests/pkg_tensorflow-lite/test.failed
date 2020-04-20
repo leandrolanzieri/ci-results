@@ -1,0 +1,19 @@
+make RIOT_CI_BUILD=1 CC_NOCOLOR=1 --no-print-directory -C /srv/ilab-builds/workspace/git/RIOT/tests/pkg_tensorflow-lite test
+r
+/srv/ilab-builds/workspace/git/RIOT/dist/tools/pyterm/pyterm -p "/dev/riot/tty-msba2" -b "115200" -tg --no-reconnect --noprefix --no-repeat-command-on-empty-line
+Twisted not available, please install it if you want to use pyterm's JSON capabilities
+Connect to serial port /dev/riot/tty-msba2
+Welcome to pyterm!
+Type '/exit' to exit.
+Help: Press s to start test, r to print it is ready
+READY
+s
+START
+main(): This is RIOT! (Version: riot/2020.04-RC1)
+#!data abort at 0x12bc (0xE1D320B0) originating from 0x1284 (0xE59F22D4) in mode 0x2000001F
+Timeout in expect script at "child.expect_exact("Digit prediction: 7")" (tests/pkg_tensorflow-lite/tests/01-run.py:10)
+
+/srv/ilab-builds/workspace/git/RIOT/tests/pkg_tensorflow-lite/../../Makefile.include:733: recipe for target 'test' failed
+make: *** [test] Error 1
+
+Return value: 2

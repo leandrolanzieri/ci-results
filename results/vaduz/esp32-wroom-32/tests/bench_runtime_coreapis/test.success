@@ -1,0 +1,30 @@
+ESP32_SDK_DIR should be defined as /path/to/esp-idf directory
+ESP32_SDK_DIR is set by default to /opt/esp/esp-idf
+r
+/srv/ilab-builds/workspace/git/RIOT/dist/tools/pyterm/pyterm -p "/dev/riot/tty-esp32-wroom-32" -b "115200" --no-reconnect --noprefix --no-repeat-command-on-empty-line
+Twisted not available, please install it if you want to use pyterm's JSON capabilities
+Connect to serial port /dev/riot/tty-esp32-wroom-32
+Welcome to pyterm!
+Type '/exit' to exit.
+READY
+s
+START
+main(): This is RIOT! (Version: riot/2020.04-RC1)
+Runtime of Selected Core API functions
+
+                 nop loop:     87506us  ---   0.087us per call  ---   11427787 calls per sec
+
+             mutex_init():         1us  ---   0.000us per call  ---  3567587328 calls per sec
+        mutex lock/unlock:   1412505us  ---   1.412us per call  ---     707962 calls per sec
+
+       thread_flags_set():    800001us  ---   0.800us per call  ---    1249998 calls per sec
+     thread_flags_clear():    775006us  ---   0.775us per call  ---    1290312 calls per sec
+thread flags set/wait any:   2175006us  ---   2.175us per call  ---     459768 calls per sec
+thread flags set/wait all:   2025006us  ---   2.025us per call  ---     493825 calls per sec
+thread flags set/wait one:   2312505us  ---   2.312us per call  ---     432431 calls per sec
+
+        msg_try_receive():   1162501us  ---   1.162us per call  ---     860214 calls per sec
+              msg_avail():    362501us  ---   0.362us per call  ---    2758613 calls per sec
+
+[SUCCESS]
+

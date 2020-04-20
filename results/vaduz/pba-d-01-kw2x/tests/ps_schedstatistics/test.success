@@ -1,0 +1,37 @@
+r
+/srv/ilab-builds/workspace/git/RIOT/dist/tools/pyterm/pyterm -p "/dev/riot/tty-pba-d-01-kw2x" -b "115200" --no-reconnect --noprefix --no-repeat-command-on-empty-line
+Twisted not available, please install it if you want to use pyterm's JSON capabilities
+Connect to serial port /dev/riot/tty-pba-d-01-kw2x
+Welcome to pyterm!
+Type '/exit' to exit.
+READY
+s
+START
+Creating thread #0, next=1
+Creating thread #1, next=2
+Creating thread #2, next=3
+Creating thread #3, next=4
+Creating thread #4, next=0
+
+> help
+ 
+>  
+>  help
+Command              Description
+---------------------------------------
+reboot               Reboot the node
+version              Prints current RIOT_VERSION
+ps                   Prints information about running threads.
+> ps
+ ps
+	pid | name                 | state    Q | pri | stack  ( used) | base addr  | current     | runtime  | switches
+	  - | isr_stack            | -        - |   - |    512 (  152) | 0x1fffc000 | 0x1fffc1c8
+	  1 | idle                 | pending  Q |  15 |    256 (  132) | 0x1fffc550 | 0x1fffc5cc  | 98.252% |       274
+	  2 | main                 | running  Q |   7 |   1536 (  748) | 0x1fffc650 | 0x1fffca6c  |  1.045% |       144
+	  3 | thread               | bl rx    _ |   6 |   1024 (  404) | 0x1fffce84 | 0x1fffd1b4  |  0.168% |       169
+	  4 | thread               | bl rx    _ |   6 |   1024 (  404) | 0x1fffd284 | 0x1fffd5b4  |  0.203% |       179
+	  5 | thread               | bl rx    _ |   6 |   1024 (  404) | 0x1fffd684 | 0x1fffd9b4  |  0.242% |       189
+	  6 | thread               | bl mutex _ |   6 |   1024 (  404) | 0x1fffda84 | 0x1fffdd7c  |  0.286% |       200
+	  7 | thread               | bl mutex _ |   6 |   1024 (  404) | 0x1fffde84 | 0x1fffe17c  |  0.163% |       210
+	    | SUM                  |            |     |   7424 ( 3052)
+> 

@@ -1,0 +1,37 @@
+r
+/srv/ilab-builds/workspace/git/RIOT/dist/tools/pyterm/pyterm -p "/dev/riot/tty-cc2650-launchpad" -b "115200" --no-reconnect --noprefix --no-repeat-command-on-empty-line
+Twisted not available, please install it if you want to use pyterm's JSON capabilities
+Connect to serial port /dev/riot/tty-cc2650-launchpad
+Welcome to pyterm!
+Type '/exit' to exit.
+READY
+s
+START
+Creating thread #0, next=1
+Creating thread #1, next=2
+Creating thread #2, next=3
+Creating thread #3, next=4
+Creating thread #4, next=0
+
+> help
+ 
+>  
+>  help
+Command              Description
+---------------------------------------
+reboot               Reboot the node
+version              Prints current RIOT_VERSION
+ps                   Prints information about running threads.
+> ps
+ ps
+	pid | name                 | state    Q | pri | stack  ( used) | base addr  | current     | runtime  | switches
+	  - | isr_stack            | -        - |   - |    512 (  160) | 0x20000000 | 0x200001c8
+	  1 | idle                 | pending  Q |  15 |    256 (  132) | 0x20000760 | 0x200007dc  | 98.017% |       294
+	  2 | main                 | running  Q |   7 |   1536 (  772) | 0x20000860 | 0x20000b6c  |  1.002% |       155
+	  3 | thread               | bl rx    _ |   6 |   1024 (  404) | 0x20000e6c | 0x2000119c  |  0.213% |       185
+	  4 | thread               | bl mutex _ |   6 |   1024 (  404) | 0x2000126c | 0x20001564  |  0.269% |       196
+	  5 | thread               | bl rx    _ |   6 |   1024 (  420) | 0x2000166c | 0x2000199c  |  0.327% |       207
+	  6 | thread               | bl rx    _ |   6 |   1024 (  404) | 0x20001a6c | 0x20001d9c  |  0.393% |       219
+	  7 | thread               | bl rx    _ |   6 |   1024 (  404) | 0x20001e6c | 0x2000219c  |  0.201% |       231
+	    | SUM                  |            |     |   7424 ( 3100)
+> 

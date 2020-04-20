@@ -1,0 +1,22 @@
+Failures during compilation:
+- [tests/pkg_nanopb](tests/pkg_nanopb/compilation.failed)
+
+Failures during test:
+- [examples/micropython](examples/micropython/test.failed)
+- [tests/driver_grove_ledbar](tests/driver_grove_ledbar/test.failed)
+- [tests/driver_my9221](tests/driver_my9221/test.failed)
+- [tests/emcute](tests/emcute/test.failed)
+- [tests/gnrc_dhcpv6_client](tests/gnrc_dhcpv6_client/test.failed)
+- [tests/gnrc_dhcpv6_client_6lbr](tests/gnrc_dhcpv6_client_6lbr/test.failed)
+- [tests/gnrc_ipv6_ext](tests/gnrc_ipv6_ext/test.failed)
+- [tests/gnrc_ipv6_ext_frag](tests/gnrc_ipv6_ext_frag/test.failed)
+- [tests/gnrc_ipv6_nib_dns](tests/gnrc_ipv6_nib_dns/test.failed)
+- [tests/gnrc_rpl_srh](tests/gnrc_rpl_srh/test.failed)
+- [tests/gnrc_sock_dns](tests/gnrc_sock_dns/test.failed)
+- [tests/gnrc_tcp](tests/gnrc_tcp/test.failed)
+- [tests/periph_rtc](tests/periph_rtc/test.failed)
+- [tests/periph_timer_short_relative_set](tests/periph_timer_short_relative_set/test.failed)
+- [tests/pkg_fatfs_vfs](tests/pkg_fatfs_vfs/test.failed)
+- [tests/pkg_qdsa](tests/pkg_qdsa/test.failed)
+- [tests/pkg_tensorflow-lite](tests/pkg_tensorflow-lite/test.failed)
+- [tests/shell](tests/shell/test.failed)

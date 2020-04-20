@@ -1,0 +1,184 @@
+
+
+/srv/ilab-builds/workspace/git/RIOT/dist/tools/pyterm/pyterm -p "/dev/riot/tty-pba-d-01-kw2x" -b "115200" --no-reconnect --noprefix --no-repeat-command-on-empty-line
+Twisted not available, please install it if you want to use pyterm's JSON capabilities
+Connect to serial port /dev/riot/tty-pba-d-01-kw2x
+Welcome to pyterm!
+Type '/exit' to exit.
+mage start address: 0x00001200
+Header chksum: 0xb2499379
+
+>  main
+> curslotnr
+ 
+>  curslotnr
+Current slot=0
+> curslothdr
+ curslothdr
+Image magic_number: 0x544f4952
+Image Version: 0x5e908547
+compiling /srv/ilab-builds/workspace/git/RIOT/dist/tools/riotboot_gen_hdr/bin/genhdr...
+make: Nothing to be done for 'all'.
+creating /srv/ilab-builds/workspace/git/RIOT/tests/riotboot/bin/pba-d-01-kw2x/tests_riotboot-slot1.1586529608.riot.bin...
+/srv/ilab-builds/workspace/git/RIOT/dist/tools/openocd/openocd.sh flash /srv/ilab-builds/workspace/git/RIOT/tests/riotboot/bin/pba-d-01-kw2x/tests_riotboot-slot1.1586529608.riot.bin
+### Flashing Target ###
+Value in fcfield is not checked when flashing at $IMAGE_OFFSET >= 0x410
+Binfile detected, adding ROM base address: 0x00000000
+Flashing with IMAGE_OFFSET: 0x00020800
+GNU MCU Eclipse OpenOCD, 64-bitOpen On-Chip Debugger 0.10.0+dev-00593-g23ad80df4 (2019-04-22-20:18)
+Licensed under GNU GPL v2
+For bug reports, read
+	http://openocd.org/doc/doxygen/bugs.html
+Info : auto-selecting first available session transport "swd". To override use 'transport select <transport>'.
+Info : add flash_bank kinetis kx.pflash
+adapter speed: 1000 kHz
+none separate
+cortex_m reset_config sysresetreq
+srst_only separate srst_nogate srst_open_drain connect_deassert_srst
+srst_only separate srst_nogate srst_open_drain connect_assert_srst
+Info : CMSIS-DAP: SWD  Supported
+Info : CMSIS-DAP: FW Version = 1.0
+Info : CMSIS-DAP: Interface Initialised (SWD)
+Info : SWCLK/TCK = 0 SWDIO/TMS = 1 TDI = 0 TDO = 0 nTRST = 0 nRESET = 1
+Info : Connecting under reset
+Info : CMSIS-DAP: Interface ready
+Info : clock speed 1000 kHz
+Info : SWD DPIDR 0x2ba01477
+Info : MDM: Chip is unsecured. Continuing.
+Info : kx.cpu: hardware has 6 breakpoints, 4 watchpoints
+Info : kx.cpu: external reset detected
+Info : Listening on port 35997 for gdb connections
+    TargetName         Type       Endian TapName            State       
+--  ------------------ ---------- ------ ------------------ ------------
+ 0* kx.cpu             cortex_m   little kx.cpu             reset
+Info : MDM: Chip is unsecured. Continuing.
+target halted due to debug-request, current mode: Thread 
+xPSR: 0x01000000 pc: 0x00000524 msp: 0x1fffc200
+auto erase enabled
+Info : Kinetis MK21DN512xxx5 detected: 2 flash blocks
+Info : 2 PFlash banks: 512k total
+wrote 14336 bytes from file /srv/ilab-builds/workspace/git/RIOT/tests/riotboot/bin/pba-d-01-kw2x/tests_riotboot-slot1.1586529608.riot.bin in 0.530996s (26.366 KiB/s)
+34 bytes written at address 0x20000000
+downloaded 34 bytes in 0.004005s (8.290 KiB/s)
+target halted due to breakpoint, current mode: Thread 
+xPSR: 0x01000000 pc: 0x20000020 msp: 0x1fffc200
+34 bytes written at address 0x20000000
+downloaded 34 bytes in 0.003989s (8.324 KiB/s)
+target halted due to breakpoint, current mode: Thread 
+xPSR: 0x01000000 pc: 0x20000020 msp: 0x1fffc200
+verified 14000 bytes in 0.184065s (74.277 KiB/s)
+Info : MDM: Chip is unsecured. Continuing.
+shutdown command invoked
+Done flashing
+Image start address: 0x00001200
+Header chksum: 0xb2499379
+
+>  main(): This is RIOT! (Version: riot/2020.04-RC1)
+Hello riotboot!
+You are running RIOT on a(n) pba-d-01-kw2x board.
+This board features a(n) kinetis MCU.
+riotboot_test: running from slot 1
+Image magic_number: 0x544f4952
+Image Version: 0x5e908548
+Image start address: 0x00020a00
+Header chksum: 0xa24f8b7c
+
+> curslotnr
+ curslotnr
+Current slot=1
+> curslothdr
+ curslothdr
+Image magic_number: 0x544f4952
+Image Version: 0x5e908548
+Image start address: 0x00020a00
+Header chksum: 0xa24f8b7c
+
+> getslotaddr 0
+ getslotaddr 0
+Slot 0 address=0x00001200
+> dumpaddrs
+ dumpaddrs
+slot 0: metadata: 0x1000 image: 0x00001200
+slot 1: metadata: 0x20800 image: 0x00020a00
+> compiling /srv/ilab-builds/workspace/git/RIOT/dist/tools/riotboot_gen_hdr/bin/genhdr...
+make: Nothing to be done for 'all'.
+creating /srv/ilab-builds/workspace/git/RIOT/tests/riotboot/bin/pba-d-01-kw2x/tests_riotboot-slot0.1586529609.riot.bin...
+/srv/ilab-builds/workspace/git/RIOT/dist/tools/openocd/openocd.sh flash /srv/ilab-builds/workspace/git/RIOT/tests/riotboot/bin/pba-d-01-kw2x/tests_riotboot-slot0.1586529609.riot.bin
+### Flashing Target ###
+Value in fcfield is not checked when flashing at $IMAGE_OFFSET >= 0x410
+Binfile detected, adding ROM base address: 0x00000000
+Flashing with IMAGE_OFFSET: 0x00001000
+GNU MCU Eclipse OpenOCD, 64-bitOpen On-Chip Debugger 0.10.0+dev-00593-g23ad80df4 (2019-04-22-20:18)
+Licensed under GNU GPL v2
+For bug reports, read
+	http://openocd.org/doc/doxygen/bugs.html
+Info : auto-selecting first available session transport "swd". To override use 'transport select <transport>'.
+Info : add flash_bank kinetis kx.pflash
+adapter speed: 1000 kHz
+none separate
+cortex_m reset_config sysresetreq
+srst_only separate srst_nogate srst_open_drain connect_deassert_srst
+srst_only separate srst_nogate srst_open_drain connect_assert_srst
+Info : CMSIS-DAP: SWD  Supported
+Info : CMSIS-DAP: FW Version = 1.0
+Info : CMSIS-DAP: Interface Initialised (SWD)
+Info : SWCLK/TCK = 0 SWDIO/TMS = 1 TDI = 0 TDO = 0 nTRST = 0 nRESET = 1
+Info : Connecting under reset
+Info : CMSIS-DAP: Interface ready
+Info : clock speed 1000 kHz
+Info : SWD DPIDR 0x2ba01477
+Info : MDM: Chip is unsecured. Continuing.
+Info : kx.cpu: hardware has 6 breakpoints, 4 watchpoints
+Info : kx.cpu: external reset detected
+Info : Listening on port 40813 for gdb connections
+    TargetName         Type       Endian TapName            State       
+--  ------------------ ---------- ------ ------------------ ------------
+ 0* kx.cpu             cortex_m   little kx.cpu             reset
+Info : MDM: Chip is unsecured. Continuing.
+target halted due to debug-request, current mode: Thread 
+xPSR: 0x01000000 pc: 0x00000524 msp: 0x1fffc200
+auto erase enabled
+Info : Kinetis MK21DN512xxx5 detected: 2 flash blocks
+Info : 2 PFlash banks: 512k total
+wrote 14336 bytes from file /srv/ilab-builds/workspace/git/RIOT/tests/riotboot/bin/pba-d-01-kw2x/tests_riotboot-slot0.1586529609.riot.bin in 0.530996s (26.366 KiB/s)
+34 bytes written at address 0x20000000
+downloaded 34 bytes in 0.004009s (8.282 KiB/s)
+target halted due to breakpoint, current mode: Thread 
+xPSR: 0x01000000 pc: 0x20000020 msp: 0x1fffc200
+34 bytes written at address 0x20000000
+downloaded 34 bytes in 0.003990s (8.322 KiB/s)
+target halted due to breakpoint, current mode: Thread 
+xPSR: 0x01000000 pc: 0x20000020 msp: 0x1fffc200
+verified 14000 bytes in 0.183986s (74.309 KiB/s)
+Info : MDM: Chip is unsecured. Continuing.
+shutdown command invoked
+Done flashing
+ main(): This is RIOT! (Version: riot/2020.04-RC1)
+Hello riotboot!
+You are running RIOT on a(n) pba-d-01-kw2x board.
+This board features a(n) kinetis MCU.
+riotboot_test: running from slot 0
+Image magic_number: 0x544f4952
+Image Version: 0x5e908549
+Image start address: 0x00001200
+Header chksum: 0xb251937b
+
+> curslotnr
+ curslotnr
+Current slot=0
+> curslothdr
+ curslothdr
+Image magic_number: 0x544f4952
+Image Version: 0x5e908549
+Image start address: 0x00001200
+Header chksum: 0xb251937b
+
+> getslotaddr 0
+ getslotaddr 0
+Slot 0 address=0x00001200
+> dumpaddrs
+ dumpaddrs
+slot 0: metadata: 0x1000 image: 0x00001200
+slot 1: metadata: 0x20800 image: 0x00020a00
+> TEST PASSED
+

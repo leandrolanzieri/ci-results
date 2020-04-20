@@ -1,0 +1,12 @@
+make RIOT_CI_BUILD=1 CC_NOCOLOR=1 --no-print-directory -C /srv/ilab-builds/workspace/git/RIOT/examples/micropython test
+miniterm.py --eol LF "/dev/riot/tty-mulle" "115200"
+could not open port '/dev/riot/tty-mulle': [Errno 2] could not open port /dev/riot/tty-mulle: [Errno 2] No such file or directory: '/dev/riot/tty-mulle'
+/srv/ilab-builds/workspace/git/RIOT/Makefile.include:688: recipe for target 'cleanterm' failed
+make[1]: *** [cleanterm] Error 1
+Unexpected end of file in expect script at "child.expect_exact('boot.py: MicroPython says hello!')" (examples/micropython/tests/01-run.py:15)
+
+Process already stopped
+/srv/ilab-builds/workspace/git/RIOT/examples/micropython/../../Makefile.include:733: recipe for target 'test' failed
+make: *** [test] Error 1
+
+Return value: 2

@@ -1,0 +1,47 @@
+make RIOT_CI_BUILD=1 CC_NOCOLOR=1 --no-print-directory -C /srv/ilab-builds/workspace/git/RIOT/examples/micropython test
+miniterm.py --eol LF "/dev/riot/tty-frdm-k64f" "115200"
+--- Miniterm on /dev/riot/tty-frdm-k64f  115200,8,N,1 ---
+--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---
+main(): This is RIOT! (Version: riot/2020.04-RC1)
+-- Executing boot.py
+boot.py: MicroPython says hello!
+-- boot.py exited. Starting REPL..
+MicroPython v1.4.2-6568-gbb8e51f6da3 on 2020-04-10; riot-frdm-k64f with kinetis
+Type "help()" for more information.
+>>> print("echo this! " * 4)
+print("echo this! " * 4)
+echo this! echo this! echo this! echo this! 
+>>> import riot
+print(riot.thread_getpid())
+import riot
+>>> pprint("echo this! " * 4)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'pprint' isn't defined
+>>> import riot
+>>> print(riot.thread_getpid())
+2
+>>> import utime
+print("echo this! " * 4)
+echo this! echo this! echo this! echo this! 
+>>> import riot
+>>> print(riot.thread_getpid())
+2
+>>> utime.time()
+
+Traceback (most recent call last):
+  File "/srv/ilab-builds/workspace/git/RIOT/examples/micropython/tests/01-run.py", line 84, in <module>
+    sys.exit(run(testfunc))
+  File "/srv/ilab-builds/workspace/git/RIOT/dist/pythonlibs/testrunner/__init__.py", line 30, in run
+    testfunc(child)
+  File "/srv/ilab-builds/workspace/git/RIOT/examples/micropython/tests/01-run.py", line 47, in testfunc
+    slack = int(test_sleep(0, 1000) * 1.1)
+  File "/srv/ilab-builds/workspace/git/RIOT/examples/micropython/tests/01-run.py", line 38, in test_sleep
+    before = get_time()
+  File "/srv/ilab-builds/workspace/git/RIOT/examples/micropython/tests/01-run.py", line 11, in get_time
+    res = int(child.readline().rstrip())
+ValueError: invalid literal for int() with base 10: '>>> print(riot.thread_getpid())'
+/srv/ilab-builds/workspace/git/RIOT/examples/micropython/../../Makefile.include:733: recipe for target 'test' failed
+make: *** [test] Error 1
+
+Return value: 2

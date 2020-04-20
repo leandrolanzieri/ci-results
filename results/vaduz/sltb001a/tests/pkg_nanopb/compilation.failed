@@ -1,0 +1,38 @@
+make RIOT_CI_BUILD=1 CC_NOCOLOR=1 --no-print-directory -C /srv/ilab-builds/workspace/git/RIOT/tests/pkg_nanopb clean all --jobs
+/srv/ilab-builds/workspace/git/RIOT/pkg/pkg.mk:102: recipe for target 'clean' failed
+make[1]: [clean] Error 1 (ignored)
+/srv/ilab-builds/workspace/git/RIOT/pkg/pkg.mk:102: recipe for target 'clean' failed
+make[1]: [clean] Error 1 (ignored)
+Launching build container using image "riot/riotbuild:latest".
+docker run --rm -t -u "$(id -u)" \
+    -v '/usr/share/zoneinfo/Europe/Berlin:/etc/localtime:ro' -v '/srv/ilab-builds/workspace/git/RIOT:/data/riotbuild/riotbase:delegated' -e 'RIOTBASE=/data/riotbuild/riotbase' -e 'CCACHE_BASEDIR=/data/riotbuild/riotbase' -e 'BUILD_DIR=/data/riotbuild/riotbase/build' -e 'RIOTPROJECT=/data/riotbuild/riotbase' -e 'RIOTCPU=/data/riotbuild/riotbase/cpu' -e 'RIOTBOARD=/data/riotbuild/riotbase/boards' -e 'RIOTMAKE=/data/riotbuild/riotbase/makefiles' -v '/srv/ilab-builds/cache/gitcache:/data/riotbuild/gitcache:delegated' -e 'GIT_CACHE_DIR=/data/riotbuild/gitcache'    \
+    -e 'BOARD=sltb001a' -e 'CC_NOCOLOR=1' -e 'RIOT_CI_BUILD=1' -e 'RIOT_VERSION=riot/2020.04-RC1' \
+    -w '/data/riotbuild/riotbase/tests/pkg_nanopb/' \
+    'riot/riotbuild:latest' make all -j 'CC_NOCOLOR=1' 'RIOT_CI_BUILD=1'  
+Building application "tests_pkg_nanopb" for "sltb001a" with MCU "efm32".
+
+[INFO] cloning gecko_sdk
+git-cache: cloning from cache. tag=commitec942b9f430193b5b3ddaf4cf2a85fc29e44696a-77
+[INFO] updating gecko_sdk /data/riotbuild/riotbase/tests/pkg_nanopb/bin/pkg/sltb001a/gecko_sdk/.pkg-state.git-downloaded
+echo ec942b9f430193b5b3ddaf4cf2a85fc29e44696a > /data/riotbuild/riotbase/tests/pkg_nanopb/bin/pkg/sltb001a/gecko_sdk/.pkg-state.git-downloaded
+[INFO] patch gecko_sdk
+[INFO] cloning nanopb
+git-cache: cloning from cache. tag=commit3eb9a75c1e66e6182e87e2bd758ff2a4d16acbdc-142
+[INFO] updating nanopb /data/riotbuild/riotbase/tests/pkg_nanopb/bin/pkg/sltb001a/nanopb/.pkg-state.git-downloaded
+echo 3eb9a75c1e66e6182e87e2bd758ff2a4d16acbdc  > /data/riotbuild/riotbase/tests/pkg_nanopb/bin/pkg/sltb001a/nanopb/.pkg-state.git-downloaded
+[INFO] patch nanopb
+"make" -C /data/riotbuild/riotbase/tests/pkg_nanopb/bin/pkg/sltb001a/gecko_sdk/dist
+"make" -C /data/riotbuild/riotbase/tests/pkg_nanopb/bin/pkg/sltb001a/nanopb -f /data/riotbuild/riotbase/pkg/nanopb/Makefile.nanopb
+protoc --python_out=. nanopb.proto
+make[2]: protoc: Command not found
+Makefile:6: recipe for target 'nanopb_pb2.py' failed
+make[2]: *** [nanopb_pb2.py] Error 127
+/data/riotbuild/riotbase/pkg/nanopb/Makefile.gensrc:22: recipe for target '/data/riotbuild/riotbase/tests/pkg_nanopb/bin/sltb001a/application_tests_pkg_nanopb/simple.pb.c' failed
+make[1]: *** [/data/riotbuild/riotbase/tests/pkg_nanopb/bin/sltb001a/application_tests_pkg_nanopb/simple.pb.c] Error 2
+make[1]: *** Waiting for unfinished jobs....
+/data/riotbuild/riotbase/Makefile.include:538: recipe for target '/data/riotbuild/riotbase/tests/pkg_nanopb/bin/sltb001a/application_tests_pkg_nanopb.a' failed
+make: *** [/data/riotbuild/riotbase/tests/pkg_nanopb/bin/sltb001a/application_tests_pkg_nanopb.a] Error 2
+/srv/ilab-builds/workspace/git/RIOT/makefiles/docker.inc.mk:285: recipe for target '..in-docker-container' failed
+make: *** [..in-docker-container] Error 2
+
+Return value: 2

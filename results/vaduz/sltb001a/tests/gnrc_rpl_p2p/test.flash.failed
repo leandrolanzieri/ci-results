@@ -1,0 +1,41 @@
+make RIOT_CI_BUILD=1 CC_NOCOLOR=1 --no-print-directory -C /srv/ilab-builds/workspace/git/RIOT/tests/gnrc_rpl_p2p flash-only
+JLINK_SERIAL= /srv/ilab-builds/workspace/git/RIOT/dist/tools/jlink/jlink.sh flash /srv/ilab-builds/workspace/git/RIOT/tests/gnrc_rpl_p2p/bin/sltb001a/tests_gnrc_rpl_p2p.bin
+### Flashing Target ###
+### Flashing at base address 0x0 with offset 0 ###
+SEGGER J-Link Commander V6.50b (Compiled Sep  6 2019 17:46:52)
+DLL version V6.50b, compiled Sep  6 2019 17:46:40
+
+J-Link Commander will now exit on Error
+
+J-Link Command File read successfully.
+Processing script file...
+
+J-Link connection not established yet but required for command.
+Connecting to J-Link via USB...O.K.
+Firmware: J-Link OB-SAM3U128-V2-NordicSemi compiled Jan  7 2019 14:07:15
+Hardware version: V1.00
+S/N: 682497679
+VTref=3.300V
+Target connection not established yet but required for command.
+
+
+*** J-Link V6.50b J-Link V6.50b Info ***
+The connected J-Link (S/N 682497679) has been designed to work with devices made by Nordic Semi only.
+Debugging the selected device EFR32MG1PxxxF256 is not supported by this J-Link.
+
+To program and debug the target device, please consider purchasing a full J-Link.
+More information: <a>https://www.segger.com/jlink-debug-probes.html</a>
+*** J-Link V6.50b J-Link V6.50b Info ***
+
+Device "EFR32MG1PXXXF256" selected.
+
+
+Connecting to target via SWD
+Cannot connect to target.
+
+Script processing completed.
+
+/srv/ilab-builds/workspace/git/RIOT/tests/gnrc_rpl_p2p/../../Makefile.include:670: recipe for target 'flash-only' failed
+make: *** [flash-only] Error 1
+
+Return value: 2

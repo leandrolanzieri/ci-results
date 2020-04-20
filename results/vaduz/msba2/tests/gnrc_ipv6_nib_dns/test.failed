@@ -1,0 +1,23 @@
+make RIOT_CI_BUILD=1 CC_NOCOLOR=1 --no-print-directory -C /srv/ilab-builds/workspace/git/RIOT/tests/gnrc_ipv6_nib_dns test
+make[1]: Nothing to be done for 'all'.
+
+
+make[2]: Nothing to be done for 'all'.
+sudo /srv/ilab-builds/workspace/git/RIOT/dist/tools/ethos/ethos tap0 /dev/riot/tty-msba2 115200
+----> ethos: sending hello.
+----> ethos: activating serial pass through.
+
+Traceback (most recent call last):
+  File "/srv/ilab-builds/workspace/git/RIOT/tests/gnrc_ipv6_nib_dns/tests/01-run.py", line 81, in <module>
+    sys.exit(run(testfunc, timeout=1, echo=True))
+  File "/srv/ilab-builds/workspace/git/RIOT/dist/pythonlibs/testrunner/__init__.py", line 30, in run
+    testfunc(child)
+  File "/srv/ilab-builds/workspace/git/RIOT/tests/gnrc_ipv6_nib_dns/tests/01-run.py", line 66, in testfunc
+    lladdr_src = get_host_lladdr(tap)
+  File "/srv/ilab-builds/workspace/git/RIOT/tests/gnrc_ipv6_nib_dns/tests/01-run.py", line 44, in get_host_lladdr
+    "Can't find host link-local address on interface {}".format(tap)
+AssertionError: Can't find host link-local address on interface tap0
+/srv/ilab-builds/workspace/git/RIOT/tests/gnrc_ipv6_nib_dns/../../Makefile.include:733: recipe for target 'test' failed
+make: *** [test] Error 1
+
+Return value: 2

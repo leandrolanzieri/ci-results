@@ -1,0 +1,45 @@
+r
+/srv/ilab-builds/workspace/git/RIOT/dist/tools/pyterm/pyterm -p "/dev/riot/tty-cc2650-launchpad" -b "115200" --no-reconnect --noprefix --no-repeat-command-on-empty-line
+Twisted not available, please install it if you want to use pyterm's JSON capabilities
+Connect to serial port /dev/riot/tty-cc2650-launchpad
+Welcome to pyterm!
+Type '/exit' to exit.
+XEL (6272)
+ucg: UCG_MSG_DRAW_PIXEL (6400)
+ucg: UCG_MSG_DRAW_PIXEL (6528)
+ucg: UCG_MSG_DRAW_PIXEL (6656)
+ucg: UCG_MSG_DRAW_PIXEL (6784)
+ucg: UCG_MSG_DRAW_PIXEL (6912)
+ucg: UCG_MSG_DRAW_PIXEL (7040)
+ucg: UCG_MSG_DRAW_PIXEL (7168)
+ucg: UCG_MSG_DRAW_PIXEL (7296)
+ucg: UCG_MSG_DRAW_PIXEL (7424)
+ucg: UCG_MSG_DRAW_PIXEL (7552)
+ucg: UCG_MSG_DRAW_PIXEL (7680)
+ucg: UCG_MSG_DRAW_PIXEL (7808)
+ucg: UCG_MSG_DRAW_PIXEL (7936)
+ucg: UCG_MSG_DRAW_PIXEL (8064)
+ucg: UCG_MSG_DRAW_PIXEL (8192)
+ucg: UCG_MSG_DRAW_PIXEL (8320)
+ucg: UCG_MSG_DRAW_PIXEL (8448)
+ucg: UCG_MSG_DRAW_PIXEL (8576)
+ucg: UCG_MSG_DRAW_PIXEL (8704)
+ucg: UCG_MSG_DRAW_PIXEL (8832)
+READY
+s
+START
+main(): This is RIOT! (Version: riot/2020.04-RC1)
+[START]
+>  Translate text of length 30 into Morse code:
+"Hello RIOT-OS!
+This is uMorse."
+>  using aligned encoding:
+.... . ._.. ._.. ___ / ._. .. ___ _ ___ ...
+_ .... .. ... / .. ... / .._ __ ___ ._. ... .
+>  encoded length=52
+>  using compact encoding:
+.... . ._.. ._.. ___ / ._. .. ___ _ ___ ...
+_ .... .. ... / .. ... / .._ __ ___ ._. ... .
+>  encoded length=25
+[SUCCESS]
+

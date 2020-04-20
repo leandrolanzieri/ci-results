@@ -1,0 +1,12 @@
+make RIOT_CI_BUILD=1 CC_NOCOLOR=1 --no-print-directory -C /srv/ilab-builds/workspace/git/RIOT/tests/emcute test
+ESP32_SDK_DIR should be defined as /path/to/esp-idf directory
+ESP32_SDK_DIR is set by default to /opt/esp/esp-idf
+make[1]: Nothing to be done for 'all'.
+Traceback (most recent call last):
+  File "/srv/ilab-builds/workspace/git/RIOT/tests/emcute/tests/01-run.py", line 19, in <module>
+    from scapy.contrib import mqttsn
+ImportError: cannot import name 'mqttsn'
+/srv/ilab-builds/workspace/git/RIOT/tests/emcute/../../Makefile.include:733: recipe for target 'test' failed
+make: *** [test] Error 1
+
+Return value: 2

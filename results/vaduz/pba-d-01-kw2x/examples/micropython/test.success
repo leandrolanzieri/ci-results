@@ -1,0 +1,79 @@
+miniterm.py --eol LF "/dev/riot/tty-pba-d-01-kw2x" "115200"
+--- Miniterm on /dev/riot/tty-pba-d-01-kw2x  115200,8,N,1 ---
+--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---
+main(): This is RIOT! (Version: riot/2020.04-RC1)
+-- Executing boot.py
+boot.py: MicroPython says hello!
+-- boot.py exited. Starting REPL..
+MicroPython v1.4.2-6568-gbb8e51f6da3 on 2020-04-10; riot-pba-d-01-kw2x with kinetis
+Type "help()" for more information.
+>>> print("echo this! " * 4)
+print("echo this! " * 4)
+echo this! echo this! echo this! echo this! 
+>>> import riot
+print(riot.thread_getpid())
+import riot
+>>> print(riot.thread_getpid())
+2
+>>> import utime
+import utime
+>>>utime.time()
+ utime.time()
+350
+>>> utime.sleep_ms(0)
+utime.sleep_ms(0)
+>>> utime.time()
+utime.time()
+464
+>>>test_sleep(0, 1000): slept 114ms
+utime.time()
+ utime.time()
+521
+>>> utime.sleep_ms(50)
+utime.sleep_ms(50)
+>>> utime.time()
+utime.time()
+684
+>>> test_sleep(50, 125): slept 163ms
+utime.time()
+utime.time()
+740
+>>> utime.sleep_ms(250)
+utime.sleep_ms(250)
+>>> utime.time()
+utime.time()
+1103
+>>> test_sleep(250, 125): slept 363ms
+utime.time()
+utime.time()
+1160
+>>> utime.sleep_ms(500)
+utime.sleep_ms(500)
+>>> utime.time()
+utime.time()
+1774
+>>> test_sleep(500, 125): slept 614ms
+import xtimer
+import xtimer
+>>> a = 0
+a = 0
+>>>def inc_a(): global a; a+=1
+ def inc_a(): global a; a+=1
+... 
+
+>>> t = xtimer.xtimer(inc_a)
+t = xtimer.xtimer(inc_a)
+>>> utime.time()
+utime.time()
+2112
+>>> t.set(500000)
+t.set(500000)
+>>> while a==0: pass
+while a==0: pass
+... 
+
+>>> utime.time()
+utime.time()
+2725
+>>> [TEST PASSED]
+

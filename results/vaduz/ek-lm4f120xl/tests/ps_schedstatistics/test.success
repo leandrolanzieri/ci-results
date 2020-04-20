@@ -1,0 +1,37 @@
+r
+/srv/ilab-builds/workspace/git/RIOT/dist/tools/pyterm/pyterm -p "/dev/riot/tty-ek-lm4f120xl" -b "115200" --no-reconnect --noprefix --no-repeat-command-on-empty-line
+Twisted not available, please install it if you want to use pyterm's JSON capabilities
+Connect to serial port /dev/riot/tty-ek-lm4f120xl
+Welcome to pyterm!
+Type '/exit' to exit.
+READY
+s
+START
+Creating thread #0, next=1
+Creating thread #1, next=2
+Creating thread #2, next=3
+Creating thread #3, next=4
+Creating thread #4, next=0
+
+> help
+ 
+>  
+>  help
+Command              Description
+---------------------------------------
+reboot               Reboot the node
+version              Prints current RIOT_VERSION
+ps                   Prints information about running threads.
+> ps
+ ps
+	pid | name                 | state    Q | pri | stack  ( used) | base addr  | current     | runtime  | switches
+	  - | isr_stack            | -        - |   - |    512 (  208) | 0x20000000 | 0x200001c8
+	  1 | idle                 | pending  Q |  15 |    256 (  132) | 0x20000540 | 0x200005bc  | 97.919% |       210
+	  2 | main                 | running  Q |   7 |   1536 (  772) | 0x20000640 | 0x20000a5c  |  0.787% |       100
+	  3 | thread               | bl rx    _ |   6 |   1024 (  404) | 0x20000e6c | 0x2000119c  |  0.235% |       127
+	  4 | thread               | bl mutex _ |   6 |   1024 (  404) | 0x2000126c | 0x20001564  |  0.343% |       134
+	  5 | thread               | bl rx    _ |   6 |   1024 (  404) | 0x2000166c | 0x2000199c  |  0.434% |       141
+	  6 | thread               | bl mutex _ |   6 |   1024 (  404) | 0x20001a6c | 0x20001d64  |  0.538% |       148
+	  7 | thread               | bl rx    _ |   6 |   1024 (  404) | 0x20001e6c | 0x2000219c  |  0.216% |       155
+	    | SUM                  |            |     |   7424 ( 3132)
+> 
